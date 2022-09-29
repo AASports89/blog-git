@@ -1,4 +1,4 @@
-    //***************************************************** USER LOGIN MENU ***************************************************//
+//***************************************************** USER LOGIN MENU ***************************************************//
     const loginFormHandler = async (event) => {
         event.preventDefault();
         const email = document.querySelector(".username-input").value.trim();
