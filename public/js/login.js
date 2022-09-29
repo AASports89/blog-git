@@ -1,9 +1,10 @@
-const loginFormHandler = async (event) => {
-  event.preventDefault();
-  const email = document.querySelector(".username-input").value.trim();
-  const password = document.querySelector(".password-input").value.trim();
+    //***************************************************** USER LOGIN MENU ***************************************************//
+    const loginFormHandler = async (event) => {
+        event.preventDefault();
+        const email = document.querySelector(".username-input").value.trim();
+        const password = document.querySelector(".password-input").value.trim();
 
-  if (email && password) {
+    if (email && password) {
       const response = await fetch("/api/user/login", {
           method: "POST",
           body: JSON.stringify({ email, password }),
@@ -12,20 +13,20 @@ const loginFormHandler = async (event) => {
 
       if (response.ok) {
           document.location.replace("/");
-      } else {
+        } else {
           alert(
               "Error❗⛔ Invalid login credentials❗⛔" +
                   response.status +
                   ": " +
                   response.statusText
           );
-      }
-  } else {
-      alert("Error❗⛔ Please fill out all required fields❗⛔");
-  }
-};
+            }
+        } else {
+        alert("Error❗⛔ Please fill out all required fields❗⛔");
+        }
+    };
 
 //EVENT LISTENERS//
-document
-  .querySelector(".login-button")
-  .addEventListener("click", loginFormHandler);
+    document
+    .querySelector(".login-button")
+    .addEventListener("click", loginFormHandler);

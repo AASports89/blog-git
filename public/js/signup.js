@@ -1,5 +1,6 @@
-const signupFormHandler = async (event) => {
-    event.preventDefault();
+//***************************************************** USER SIGNUP MENU ***************************************************//
+    const signupFormHandler = async (event) => {
+        event.preventDefault();
 
     const username = document.querySelector(".username-input").value.trim();
     const email = document.querySelector(".email-input").value.trim();
