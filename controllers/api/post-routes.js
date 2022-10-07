@@ -8,6 +8,7 @@
             const dbPostData = await Post.create({
                 title: req.body.title,
                 content: req.body.content,
+                image: req.body.image,
                 author_id: req.body.author_id,
             });
         return res.status(200).json(dbPostData);

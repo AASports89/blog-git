@@ -1,6 +1,7 @@
 //DEPENDECY & IMPORT//
   const router = require("express").Router();
   const { User } = require("../../models");
+  const withAuthAdmin = require("../../utils/auth");
 
 //CREATE NEW ACCOUNT//
     router.post("/", async (req, res) => {
@@ -22,13 +23,34 @@
         }
     });
 
+//DELETE USER ACCOUNT//
+    router.get("/:id", withAuthAdmin, async (req, res) => {
+    try {
+        const dbUserData = await User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+            isAdmin: req.body.is_admin,
+    });
+        req.session.save(() => {
+        req.session.loggedIn = true;
+        req.session.loggedInUserData = dbUserData;
+        return res.status(200).json(dbUserData);
+    });
+        } catch (err) {
+            console.log(err);
+                return res.status(500).json(err);
+    }
+});
+
 //LOGIN//
     router.post("/login", async (req, res) => {
         try {
             const dbUserData = await User.findOne({
                 where: {
+                username: req.body.username,
                 email: req.body.email,
-            },
+            }, 
         });
 
         if (!dbUserData) {

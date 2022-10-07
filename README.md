@@ -4,9 +4,10 @@
   
 ## Overview
 ---
-  **'Blog Git'** is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. The application will feature ```API``` calls for the ```GET```, ```PUT```, and ```DELETE``` methods. This application was designed based on utilizing the dynamic ```JavaScript``` and  ```HTML``` languages with dependencies on ```MySQL```, ```Express.js```, ```Handlebars```, ```Dotenv```, ```Bcrypt``` & ```Sequelize```. 
+  **'Blog Git'** is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. The application will feature ```API``` calls for the ```GET```, ```PUT```, ```POST``` and ```DELETE``` methods. 
+  This application was designed based on the ```MVC``` concept, specifically utilizing the dynamic ```JavaScript``` and  ```HTML``` languages with dependencies on ```MySQL```, ```Express.js```, ```Handlebars```, ```Dotenv```, ```Bcrypt``` & ```Sequelize```.
 
-  **'Blog Git'** features a functionality for a user to enter, comment-on, update and delete a tech-related blog post. Additionally, the application will allow a user access to their own dashboard feature displaying all of their blog posts. Lastly, a user can gain access to all of the features w/in **'Blog Git'** by creating an account via ```login-in``` information securely stored using ```cookie``` & ```HTTP``` related processes through ```Heroku```. 
+  **'Blog Git'** features a functionality for a user to enter, comment-on, update and delete blog posts along with images. Additionally, the application will allow administrators to access a dashboard feature displaying all of user's blog post identifying data. Lastly, a user can gain access to all of the features w/in **'Blog Git'** by creating an account via ```login-in``` information securely stored using ```cookie``` & ```HTTP``` related processes which are all ran through ```Heroku```, the deployed application's location. 
 
 ## Table of Contents
 ---
@@ -14,6 +15,7 @@
   * [Overview](#overview)
   * [User Story](#user-story)
   * [Acceptance Criteria](#acceptance-criteria)
+  * [Installation](#installation)
   * [Mock Up](#mock-up)
   * [GitHUB Repository](#github-repository)
   * [Evaluation Guideline](#evaluation-guideline)
@@ -67,6 +69,40 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
+## Installation
+---
+> **Important:** Once, the source code has been cloned from the repository @https://github.com/AASports89/blog-git:
+
+ Enter the following to initiate the app configuration & installation process:
+
+ ```
+ npm i express
+ ```
+ -followed by-
+ ```
+ npm i express-handlebars
+ ```
+ -followed by-
+ ```
+ npm i mysql2
+ ```
+ -followed by-
+ ```
+ npm i dotenv
+ ```
+ -followed by-
+ ```
+ npm i sequelize
+ ```
+ -followed by-
+ ```
+ node seed/index.js
+ ```
+ -followed by-
+ ```
+ node server.js
+ ```
+ in the terminal cmd to install & run locally via PORT 3001.
 
 ## Mock-Up
 ---

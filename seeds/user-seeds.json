@@ -1,0 +1,20 @@
+[
+    {
+        "username": "AASports89",
+        "email": "aasports89@gmail.com",
+        "password": "test123",
+        "isAdmin": "true"
+    },
+    {
+        "username": "Da Lannisters",
+        "email": "test@gmail.com",
+        "password": "test1234",
+        "isAdmin": "false"
+    },
+    {
+        "username": "Dr. Evil",
+        "email": "test_deez@gmail.com",
+        "password": "test12345",
+        "isAdmin": "false"
+    }
+]

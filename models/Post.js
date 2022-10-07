@@ -18,6 +18,10 @@
             type: DataTypes.STRING,
             allowNull: false,
         },
+            image: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
             content: {
             type: DataTypes.STRING(10000),
             allowNull: false,

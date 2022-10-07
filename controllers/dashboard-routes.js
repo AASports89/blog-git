@@ -1,9 +1,9 @@
 //DEPENDENCY & IMPORT//
     const router = require("express").Router();
     const { Post, User } = require("../models");
-    const withAuth = require("../utils/auth");
+    const withAuthAdmin = require("../utils/auth");
 
-    router.get("/", withAuth, async (req, res) => {
+    router.get("/", withAuthAdmin, async (req, res) => {
         try {
             const postData = await Post.findAll({
                 include: [

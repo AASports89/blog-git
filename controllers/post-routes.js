@@ -4,7 +4,7 @@
     const User = require("../models/User");
     const Comment = require("../models/Comment");
 
-//RENDER HANDLEBARS --> HTML POST//
+//RENDER HANDLEBARS --> LOAD HTML POST --> TRIMMED SUMMARY VIA UTIL HELPER//
     router.get("/:id", async (req, res) => {
         try {
             const postData = await Post.findOne({

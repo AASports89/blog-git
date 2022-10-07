@@ -9,7 +9,7 @@
     const is_admin = false;
 //ALERT USER --> PASSWORD REQUIREMENTS//
     if (password.length < 6) {
-        alert("The minimum password length is 6 characters.");
+        alert("⛔ The minimum password length is 6 characters❗ ⛔");
     } else if (username && email && password) {
         const response = await fetch("/api/user", {
             method: "POST",
