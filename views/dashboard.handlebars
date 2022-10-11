@@ -1,14 +1,59 @@
+{{!-- ***************************************************** ADMIN DASHBOARD VIEW *************************************************** --}}
+<section class="hero has-background-grey-lighter">
+    <div class="hero-body">
+        <div class="container">
+             <label class="label is-large" id="dash-head" class="label">Create New Post ⌨️</label>
+            <div class="columns is-centered">
+                <div class="column">
+                    <form class="box">
+                       <label class="label" style="border-bottom: 1px dashed black; margin-bottom: 3%; text-align: center; font-size: 125%">Content 🗄️</label>
+                        <div class="field">
+                            <label class="label" style="margin-top: 2.5%; margin-bottom: 1%">Upload Image 🎞️:</label>
+                            <div class="control">
+                                <div id="inline_container"></div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" style="border-bottom: 1px solid black" >Subject / Title 🗃️</label>
+                            <div class="control">
+                               <div class="control" style="margin-top: 2.5%">
+                                    <input type="text" placeholder="www.ssh.com...Blog Git before you even start...📢" 
+                                class="input subject-input" required/>
+                            </div>
+                        </div>
+                        <div class="field-body">
+                            <div class="field" style="margin-top: 3%">
+                                <div class="control">
+                                    <label class="label">Content 📢:</label>
+                                    <textarea
+                                        class="textarea content-input"
+                                        placeholder="Blog Git before you even start...🖥️"
+                                        required>
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right mt-3">
+                            <button id="dash-submit" class="button is-success submit-post">
+                               Submit 📬
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="hero has-background-grey-lighter hug">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column">
-                    <form class="box">
-{{!----------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
-                        <table
-                            class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+{{!--------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
+                    <form id="dash-box" class="box">
+                        <table id="table-dash">
                             <thead>
-                                <tr style="text-align: center; font-weight: bold; font-size: 115%">
+                                <tr id="dash-table">
                                     <th class="table-id">ID 📇</th>
                                     <th class="table-title">Title 📚</th>
                                     <th class="table-author">Author 🧑‍🦲</th>
@@ -20,18 +65,18 @@
 
                             <tbody>
                                 {{#each posts}}
-                                    <tr style="text-align: center">
+                                    <tr id="table-row">
                                         <td>{{this.id}}</td>
-                                        <td>{{this.title}}</td>
+                                        <td>
+                                            <a href="/post/{{this.id}}">{{this.title}}</a>
+                                        </td>
                                         <td>{{this.user.username}}</td>
                                         <td>{{format_date this.createdAt}}</td>
-                                        <td>
-                                            <a href="/edit/{{this.id}}">Edit ✍️</a>
+                                        <td id="editt">
+                                            <a id="edit" href="/edit/{{this.id}}">✍️</a>
                                         </td>
-                                        <td>
-                                            <a class="delete-post" data-id="{{this.id}}">
-                                                <i class="fa-solid fa-trash-can"></i>
-                                            </a>
+                                        <td id="delete">
+                                            <a class="delete-post" id="delete-post" data-id="{{this.id}}">❌</a>
                                         </td>
                                     </tr>
                                 {{/each}}

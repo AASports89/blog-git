@@ -9,13 +9,13 @@
         "title": "Creating a user account 101.",
         "content": "Be sure to create a user account with a username, email and a password with at least 6-characters.",
         "image": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1665094426/blog-it-images/th-9_fpdf3v.jpg",
-        "author_id": "1"
+        "author_id": "2"
     },
     {
         "title": "Follow the rules set forth by 'Blog Git'!",
         "content": "It is important to follow the rules & code of conduct as outlined by the administrators of 'Blog Git'!",
         "image": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1665087137/blog-it-images/th-3_ydktqd.jpg",
-        "author_id": "1"
+        "author_id": "3"
     },
     {
         "title": "Posts can be edited, commented on & deleted.",

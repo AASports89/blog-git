@@ -20,13 +20,13 @@
     {
         "comment": "Tell all of your developer friends about this cool space!",
         "image": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1665087137/blog-it-images/th-5_lqj9uu.jpg",
-        "author_id": "2",
-        "post_id": "1"
+        "author_id": "1",
+        "post_id": "4"
     },
     {
         "comment": "Respect the rules of conduct within 'Blog Git', so everyone has a good time!",
         "image": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1665087137/blog-it-images/th-2_g5lrmz.jpg",
-        "author_id": "3",
-        "post_id": "1"
+        "author_id": "2",
+        "post_id": "5"
     }
 ]

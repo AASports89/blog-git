@@ -1,65 +1,63 @@
 //***************************************************** POST MENU ***************************************************//
-let image = "";
 const submitCommentHandler = async (event) => {
-        event.preventDefault();
-            console.log(image);
-    const content = document.querySelector(".content-input").value.trim();
-    const comment = document.querySelector(".comment-input").value.trim();
+    event.preventDefault();
+    const comment = document.querySelector(".comment-input").value;
     const author_id = document.querySelector(".logged-in-user-id").innerHTML;
     const post_id = document.querySelector(".current-post-id").innerHTML;
+    const image = "";
         if (!author_id) {
-        document.location.replace("/login");
+            alert("Error❗⛔ Unable to post, please login❗⛔");
         } else {
-            if (content && comment && image) {
-            const response = await fetch("/api/post/", {
+        if (comment) {
+            const response = await fetch("/api/comment/", {
                 method: "POST",
-                body: JSON.stringify({ content, comment, image, author_id, post_id }),
+                body: JSON.stringify({ comment, image, author_id, post_id }),
                 headers: { "Content-Type": "application/json" },
             });
             if (response.ok) {
-                document.location.replace(
-                    "/post/" + post_id + "#comment-section"
-                );
+                document.location.replace("/post/" + post_id + "#comment-section");
+                + 
+                alert(`Success✅ New comment added❕✍`);
                 document.location.reload();
             } else {
-                alert("Error❗⛔ Failed to post❗⛔" +
+                alert(
+                    "Error❗⛔ Failed to comment❗⛔" +
                         response.status +
                         ": " +
                         response.statusText
                 );
             }
             } else {
-            alert("Error❗⛔ Please fill out all required fields❗⛔");
+                alert("Error❗⛔ Please fill out all required fields❗⛔");
             }
         }
     };
 //DELETE COMMENT//
     const deleteCommentHandler = async (event) => {
         event.preventDefault();
-    const deleteCommentId = event.target.getAttribute("data-id");
-    const currentPostId = document.querySelector(".current-post-id").innerHTML;
+        const deleteCommentId = event.target.getAttribute("data-id");
+        const currentPostId = document.querySelector(".current-post-id").innerHTML;
         console.log(2);
-            if (deleteCommentId) {
-        const response = await fetch("/api/comment/" + deleteCommentId, {
-            method: "DELETE",
-            headers: { "Content-Type": "application/json" },
-        });
+        if (deleteCommentId) {
+            const response = await fetch("/api/comment/" + deleteCommentId, {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+            });
             if (response.ok) {
-            document.location.replace(
-                "/post/" + currentPostId + "#comment-section"
-            );
-            document.location.reload();
+                document.location.replace("/post/" + currentPostId + "#comment-section") 
+                                        +
+                    alert("Warning❗⛔ Comment deleted❗❌");
+                document.location.reload();
             } else {
                 alert(
-                "Error❗⛔ Failed to delete comment❗⛔" +
-                    response.status +
-                    ": " +
-                    response.statusText
+                    "Error❗⛔ Failed to delete comment❗⛔" +
+                        response.status +
+                        ": " +
+                        response.statusText
                 );
             }
         }
     };
-
 //EVENT LISTENERS//
     document
         .querySelector(".comment-submit")
@@ -69,15 +67,3 @@ const submitCommentHandler = async (event) => {
     deleteLinks.forEach((el) =>
         el.addEventListener("click", (event) => deleteCommentHandler(event))
     );
-//CLOUDIARY WIDGET --> IMAGE UPLOAD VIA URL//
-    var myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dhqsixgmo', uploadPreset: 'dpfyatxo'}, (error, result) => { 
-        if (!error && result && result.event === "success") { 
-            console.log('Done! Here is the image info: ', result.info); 
-                image=result.info.url
-                    console.log(image);
-        }
-    })
-    document.getElementById("upload_widget").addEventListener("click", function(){
-        myWidget.open();
-        }, false);

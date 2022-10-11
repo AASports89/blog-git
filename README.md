@@ -109,19 +109,44 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 > **Note:** The following GIF & images show **'Blog Git'** appearance and functionality:
 
 ### **Overall App:** (*GIF*)
-<img src="./public/assets/images/note-taker.gif">
+<img src="./public/images/blog-git.gif">
 
 ### **Homepage:**
 ---
-<img src="./public/assets/images/home.png">
+<img src="./public/images/homepage.png">
 
-### **Main Page:**
+### **Login Page:**
 ---
+<img src="./public/images/login.png">
 
-### **Mobile Device Capable:**
+### **Sign Up Page:**
 ---
-<img src="./public/assets/images/mobile.jpg">
- 
+<img src="./public/images/signup.png">
+
+### **Admin Dashboard:**
+---
+<img src="./public/images/admin-dash.png">
+
+### **Create Post:**
+---
+<img src="./public/images/new-post.png">
+
+### **Comment on Post:**
+---
+<img src="./public/images/comment.png">
+
+### **Edit Post:**
+---
+<img src="./public/images/edit.png">
+
+### **Tablet Device Capable:**
+---
+<img src="./public/images/tablet.png">
+
+### **Smart Phone Capable:**
+---
+<img src="./public/images/smart-phone.png">
+
 ## Deployed Webpage URL
 ---
 > https://

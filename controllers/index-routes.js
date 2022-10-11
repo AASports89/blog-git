@@ -7,7 +7,7 @@
   router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({
-            //JOIN TO INCLUDE --> USER + POST//
+//JOIN TO INCLUDE --> USER + POST//
             include: [
                 {
                     model: User,
@@ -19,29 +19,29 @@
 //MAP --> POSTARRAY//
         const posts = postData.map((post) => post.get({ plain: true }));
 //PACKAGE POSTS PRIOR TO --> RENDER//
-        const postArray = [];
-        let currentPostArray = [];
+        const packagedPosts = [];
+        let currentPackage = [];
         for (let i = 0; i < posts.length; i++) {
             if (i == 0) {
-                currentPostArray.push(posts[i]);
-                postArray.push(currentPostArray);
-                currentPostArray = [];
+                currentPackage.push(posts[i]);
+                packagedPosts.push(currentPackage);
+                currentPackage = [];
             } else {
-                currentPostArray.push(posts[i]);
+                currentPackage.push(posts[i]);
             }
 //ODD # OR <1 RULE//
             if (i % 2 == 0 || posts.length - i <= 1) {
-                if (currentPostArray.length != 0) {
-                    postArray.push(currentPostArray);
+                if (currentPackage.length != 0) {
+                    packagedPosts.push(currentPackage);
                 }
-                currentPostArray = [];
+                currentPackage = [];
             }
         }
 //RENDER PAGE --> HANDLEBARS//
         res.render("index", {
             loggedIn: req.session.loggedIn,
             loggedInUserData: req.session.loggedInUserData,
-            posts: postArray,
+            posts: packagedPosts,
         });
     } catch (err) {
         res.status(500).json(err);

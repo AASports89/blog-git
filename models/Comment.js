@@ -18,7 +18,7 @@
             allowNull: false,
         },
             image: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(1000),
             allowNull: false,
         },
             author_id: {

@@ -8,7 +8,7 @@
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
         }
-    }
+    };
 //USER MODEL//
     User.init(
     {

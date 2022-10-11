@@ -2,29 +2,59 @@
   box-sizing: border-box;
 }
 
+#inline_container {
+  max-height: auto;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#addpost {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 200%;
+}
+
+#dash-head {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 200%;
+}
+
 h1 {
   text-align: center;
   text-decoration: none;
+  border-bottom: 1.5px solid black;
+  padding-bottom: 1%;
 }
 
-h2 {
+#h2 {
   text-align: center;
+  color: black;
+  font-size: 125%;
 }
 
-h6 {
+#h6 {
   text-align: center;
   font-weight: bold;
+  color: black;
+  padding-bottom: 5%;
+}
+
+#image {
+  margin-left: 15%;
+  border: dashed 1.5px whitesmoke;
+  border-radius: 0.5em;
 }
 
 .custom__image-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .custom__form input {
-  opacity: 0;
-  height: 0;
+text-align: left;
 }
 
 .custom__image-container label {
@@ -46,11 +76,12 @@ h6 {
   border: solid 1px black;
   border-radius: 5px;
   object-fit: cover;
+  justify-content: center;
 }
 
 body,
 html {
-  height: 110%;
+  height: 105%;
   padding: 10px;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,40 +92,97 @@ html {
   margin-left: 10%;
 }
 
-nav.navbar {
-  height: 35% !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
-  border-bottom: dashed 1.5px black;
+#logo1 {
+  width: 30%;
 }
 
-.navbar-item img {
-  max-height: 150%;
+#logo2 {
+width: 30%;
 }
 
-.nav-link {
-  font-size: 150%;
+#navirow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: solid 1.5px black;
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+  width: 100%;
+}
+
+#navbarMenu a {
+  border-radius: 0.5em;
+  border: solid 1px black;
+  background-image: linear-gradient(rgb(235, 237, 244) 0%, rgb(65, 65, 69) 100%);
   font-weight: bold;
+  color: black;
+  margin: 1%;
+  margin-top: 5%;
 }
 
-.nav-link:hover {
-  font-size: 125%;
-  color: rgb(126, 132, 138);
+#navbarMenu a:hover {
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  font-size: 90%;
+  transition: all 0.3s ease-in-out;
+  color: whitesmoke;
 }
 
 #login-btn:hover {
 font-size: 85%;
 background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+transition: all 0.3s ease-in-out;
 }
 
 #signup-btn:hover {
   font-size: 85%;
   background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .signup-button:hover {
   font-size: 85%;
   background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#table-dash {
+  width: 100%;
+}
+
+#dash-box {
+  width: 100%;
+}
+
+#dash-table {
+  text-align: center;
+  font-size: 125%;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+#table-head {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 125%;
+  font-weight: bold;
+}
+
+#table-row {
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+td {
+  border-left: 1px solid black;
+}
+
+#delete:hover {
+  background-color: rgb(177, 178, 189);
+}
+
+#editt:hover {
+  background-color: rgb(177, 178, 189);
 }
 
 .table-id {
@@ -121,21 +209,76 @@ background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   width: 12%;
 }
 
-.hero-body-neg {
-  margin-top: -3em;
+#edit-submit {
+  font-weight: bold;
+  border: 1px solid black;
 }
 
-.delete-comment {
+#edit-submit:hover {
+  font-size: 85%;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#submit-post {
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+#submit-post:hover {
+  font-size: 85%;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#comment-submit {
+  margin-top: 5%;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+#comment-submit:hover {
+  font-size: 85%;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#dash-submit {
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+#dash-submit:hover {
+  font-size: 85%;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+#delete-comment {
+  font-size: 125%;
   text-decoration: none;
 }
 
-.delete-comment:hover {
+#delete-comment:hover {
   cursor: pointer;
-  color: rgb(230, 12, 20);
+  font-size: 150%;
+  transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 1025px) {
-  .navbar-item img {
-      max-height: 3em;
-  }
+#delete-post:hover {
+  cursor: pointer;
+  font-size: 125%;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit:hover {
+  cursor: pointer;
+  font-size: 125%;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#footer {
+  height: 20%;
+  font-size: 125%;
 }

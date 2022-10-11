@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-                        <title>Blog Git 🕹️</title>
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/bulma-divider.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-        <script src="../js/config/apiConfig.js"></script>
-    </head>
 {{!------------------------------------ IMAGE SPACE ---------------------------------------}}
   <section class="hero ">
     <div class="hero-body">
@@ -30,12 +16,12 @@
   <div class="columns">
     <div class="column is-8 is-offset-2" style="padding-top: 5%">
       <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
-        <h1 class="title"><a href="/edit/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
+        <h1 class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
         <img class="card-img-top" src="{{posts.0.0.image}}" alt="Card image">
       <div class="card-body">
         <h2>{{format_date posts.0.0.createdAt}}</h2>
-        <h6>by {{posts.0.0.user.username}}</h6>
-        <p class"card-text">{{posts.0.0.content}}</p>
+        <h6>By: {{posts.0.0.user.username}}</h6>
+        <p class="card-text">{{posts.0.0.content}}</p>
       </div>
       </div>
     </div>
@@ -60,5 +46,4 @@
       </div>
     </div>
   </section>
-  <script src='/js/index.js'></script>
-</html>
+  <script src='/js/index.js'></script> 

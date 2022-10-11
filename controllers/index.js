@@ -9,6 +9,7 @@
     const logoutRoutes = require("./logout-routes");
     const dashboardRoutes = require("./dashboard-routes");
     const editRoutes = require("./edit-routes");
+    const addPost = require("./add-post");
 
 //ROUTE --> CONTROLLER//
     router.use("/", indexRoutes);
@@ -19,5 +20,6 @@
     router.use("/logout", logoutRoutes);
     router.use("/dashboard", dashboardRoutes);
     router.use("/edit", editRoutes);
+    router.use("/addpost", addPost);
 
     module.exports = router;
