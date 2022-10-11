@@ -2,6 +2,24 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(rgb(169, 186, 247) 0%, rgb(6, 6, 195) 100%);
+}
+
+.container {
+  background-image: linear-gradient(rgb(169, 186, 247) 0%, rgb(6, 6, 195) 100%);
+  border-radius: 0.5em;
+}
+
+section {
+  background-image: linear-gradient(rgb(197, 199, 208) 0%, rgb(109, 109, 116) 100%);
+  border: 1.5px solid black;
+  border-radius: 0.5em;
+  padding-top: 2%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+
 #inline_container {
   max-height: auto;
   width: 100%;
@@ -106,6 +124,12 @@ width: 30%;
   background-color: whitesmoke;
   border-radius: 0.5em;
   width: 100%;
+  margin-bottom: 5%;
+}
+
+#navbarMenu {
+  width: 100%;
+  margin-bottom: 5%;
 }
 
 #navbarMenu a {
@@ -154,27 +178,28 @@ transition: all 0.3s ease-in-out;
 
 #dash-table {
   text-align: center;
-  font-size: 125%;
+  font-size: 115%;
   font-weight: bold;
-  border-bottom: 1px solid black;
+  border-bottom: 1px dashed black;
 }
 
 #table-head {
   text-align: center;
   border-bottom: 1px solid black;
-  font-size: 125%;
+  font-size: 115%;
   font-weight: bold;
 }
 
 #table-row {
   text-align: center;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  font-weight: bold;
+  border-bottom: 1px dashed black;
+  border-right: 1px dashed black;
+  border-left: 1px dashed black;
 }
 
 td {
-  border-left: 1px solid black;
+  border-left: 1px dashed black;
 }
 
 #delete:hover {
@@ -267,13 +292,13 @@ td {
 
 #delete-post:hover {
   cursor: pointer;
-  font-size: 125%;
+  font-size: 150%;
   transition: all 0.3s ease-in-out;
 }
 
 #edit:hover {
   cursor: pointer;
-  font-size: 125%;
+  font-size: 150%;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
 }
