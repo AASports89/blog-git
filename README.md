@@ -109,6 +109,13 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ---
 > **Note:** The following GIF & images show **'Blog Git'** appearance and functionality:
 
+> **Important:** Use the following credentials to login as 'Admin':
+```
+Username: "Admin"
+Email: "admin@gmail.com"
+Password: "test123"
+```
+
 ### **Overall App:** (*GIF*)
 <img src="./public/images/blog-git.gif">
 
