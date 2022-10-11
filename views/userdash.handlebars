@@ -1,0 +1,44 @@
+<section id="user-dash" class="hero has-background-grey-lighter hug">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+{{!--------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
+                    <form id="dash-box" class="box">
+                        <table id="table-dash">
+                            <label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 125%">User Dashboard 🎛️</label>
+                            <thead>
+                                <tr id="dash-table">
+                                    <th class="table-id">ID 📇</th>
+                                    <th class="table-title">Title 📚</th>
+                                    <th class="table-created">Date/Time 🗓️</th>
+                                    <th class="table-edit">Edit ✍️</th>
+                                    <th class="table-delete">Delete ❌</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {{#each post}}
+                                    <tr id="table-row">
+                                        <td>{{id}}</td>
+                                        <td>
+                                            <a href="/post/{{id}}">{{title}}</a>
+                                        </td>
+                                        <td>{{format_date createdAt}}</td>
+                                        <td id="editt">
+                                            <a id="edit" href="/edit/{{this.id}}">✍️</a>
+                                        </td>
+                                        <td id="delete">
+                                            <a class="delete-post" id="delete-post" data-id="{{this.id}}">❌</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/userdash.js"></script>
