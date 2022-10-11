@@ -5,20 +5,21 @@ const { Post, User } = require("../models");
 router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({
+            
             include: [
             {
                 model: User,
-                attributes: ["id", "username"],
+                    attributes: ["id"],
             },
         ],
         order: [["createdAt", "DESC"]],
     });
 
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const post = postData.map((post) => post.get({ plain: true }));
             res.render("addpost", {
                 loggedIn: req.session.loggedIn,
                 loggedInUserData: req.session.loggedInUserData,
-                posts: posts,
+                post: post,
         });
         } catch (err) {
             res.status(500).json(err);

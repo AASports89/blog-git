@@ -32,10 +32,38 @@ let image = "";
             }
         }
     };
+//DELETE POST//
+    const deletePostHandler = async (event) => {
+        event.preventDefault();
+        const deletePostId = event.target.getAttribute("data-id");
+        if (deletePostId) {
+        const response = await fetch("/api/post/" + deletePostId, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        });
+        if (response.ok) {
+
+        alert(`Warning❗⛔ Post deleted❗❌` 
+                            +
+        document.location.replace("/addpost"));
+
+        } else {
+            alert("Error❗⛔ Failed to delete post❗⛔" +
+                response.status +
+                ": " +
+                response.statusText);
+            }
+        }
+    };
 //EVENT LISTENERS//
     document
         .querySelector(".submit-post")
         .addEventListener("click", submitPostHandler
+    );
+    //EVENT LISTENERS//
+    const deleteButtons = document.querySelectorAll(".delete-post");
+        deleteButtons.forEach((el) =>
+            el.addEventListener("click", (event) => deletePostHandler(event))
     );
 //****************************************** IMAGE UPLOAD PROCESS ****************************************//
 //CLOUDIARY WIDGET --> IMAGE UPLOAD VIA URL//

@@ -10,7 +10,7 @@
     const dashboardRoutes = require("./dashboard-routes");
     const editRoutes = require("./edit-routes");
     const addPost = require("./add-post");
-    const userDash = require("./user-dashboard");
+    const userEdit = require("./user-edit-routes");
 
 //ROUTE --> CONTROLLER//
     router.use("/", indexRoutes);
@@ -22,6 +22,6 @@
     router.use("/dashboard", dashboardRoutes);
     router.use("/edit", editRoutes);
     router.use("/addpost", addPost);
-    router.use("/userdash", userDash);
+    router.use("/useredit", userEdit);
 
     module.exports = router;
